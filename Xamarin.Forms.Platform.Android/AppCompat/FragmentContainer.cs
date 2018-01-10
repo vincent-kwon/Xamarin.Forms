@@ -13,7 +13,6 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 		readonly WeakReference _pageReference;
 
 		Action<PageContainer> _onCreateCallback;
-		bool? _isVisible;
 		PageContainer _pageContainer;
 		IVisualElementRenderer _visualElementRenderer;
 
@@ -34,21 +33,21 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 
 		IPageController PageController => Page as IPageController;
 
-		public override bool UserVisibleHint
-		{
-			get { return base.UserVisibleHint; }
-			set
-			{
-				base.UserVisibleHint = value;
-				if (_isVisible == value)
-					return;
-				_isVisible = value;
-				if (_isVisible.Value)
-					PageController?.SendAppearing();
-				else
-					PageController?.SendDisappearing();
-			}
-		}
+		//public override bool UserVisibleHint
+		//{
+		//	get { return base.UserVisibleHint; }
+		//	set
+		//	{
+		//		base.UserVisibleHint = value;
+		//		if (_isVisible == value)
+		//			return;
+		//		_isVisible = value;
+		//		if (_isVisible.Value)
+		//			PageController?.SendAppearing();
+		//		else
+		//			PageController?.SendDisappearing();
+		//	}
+		//}
 
 		public static Fragment CreateInstance(Page page)
 		{
