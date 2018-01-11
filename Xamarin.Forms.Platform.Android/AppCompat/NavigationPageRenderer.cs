@@ -668,6 +668,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			FragmentManager.EnableDebugLogging(true);
 #endif
 
+			Current.SendDisappearing();
 			Current = page;
 
 			((Platform)Element.Platform).NavAnimationInProgress = true;
@@ -882,7 +883,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			Device.StartTimer(TimeSpan.FromMilliseconds(duration), () =>
 			{
 				tcs.TrySetResult(true);
-				fragment.UserVisibleHint = true;
+				Current.SendAppearing();
 				if (shouldUpdateToolbar)
 					UpdateToolbar();
 
