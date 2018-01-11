@@ -219,7 +219,6 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 		{
 			base.OnAttachedToWindow();
 			PageController.SendAppearing();
-			_fragmentStack.Last().UserVisibleHint = true;
 			RegisterToolbar();
 			UpdateToolbar();
 		}

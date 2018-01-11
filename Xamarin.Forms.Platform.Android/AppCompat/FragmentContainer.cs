@@ -33,22 +33,6 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 
 		IPageController PageController => Page as IPageController;
 
-		//public override bool UserVisibleHint
-		//{
-		//	get { return base.UserVisibleHint; }
-		//	set
-		//	{
-		//		base.UserVisibleHint = value;
-		//		if (_isVisible == value)
-		//			return;
-		//		_isVisible = value;
-		//		if (_isVisible.Value)
-		//			PageController?.SendAppearing();
-		//		else
-		//			PageController?.SendDisappearing();
-		//	}
-		//}
-
 		public static Fragment CreateInstance(Page page)
 		{
 			return new FragmentContainer(page) { Arguments = new Bundle() };
