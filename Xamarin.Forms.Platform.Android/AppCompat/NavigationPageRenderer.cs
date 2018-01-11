@@ -668,7 +668,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			FragmentManager.EnableDebugLogging(true);
 #endif
 
-			Current.SendDisappearing();
+			Current?.SendDisappearing();
 			Current = page;
 
 			((Platform)Element.Platform).NavAnimationInProgress = true;
