@@ -882,7 +882,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			Device.StartTimer(TimeSpan.FromMilliseconds(duration), () =>
 			{
 				tcs.TrySetResult(true);
-				Current.SendAppearing();
+				Current?.SendAppearing();
 				if (shouldUpdateToolbar)
 					UpdateToolbar();
 
