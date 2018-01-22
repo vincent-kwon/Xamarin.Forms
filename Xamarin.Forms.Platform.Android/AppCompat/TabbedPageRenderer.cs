@@ -133,6 +133,8 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 
 				if (Element != null)
 					PageController.InternalChildren.CollectionChanged -= OnChildrenCollectionChanged;
+
+				_previousPage = null;
 			}
 
 			base.Dispose(disposing);
