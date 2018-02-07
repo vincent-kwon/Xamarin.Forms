@@ -131,6 +131,7 @@
       <Type Name="Application" Kind="Class" />
       <Type Name="AppLinkEntry" Kind="Class" />
       <Type Name="Aspect" Kind="Enumeration" />
+      <Type Name="AutoCapitalization" Kind="Enumeration" />
       <Type Name="AutomationProperties" Kind="Class" />
       <Type Name="BackButtonPressedEventArgs" Kind="Class" />
       <Type Name="BaseMenuItem" Kind="Class" />
